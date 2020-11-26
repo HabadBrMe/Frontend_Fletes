@@ -29,7 +29,18 @@ const routes = [
     path: '/soytransportista',
     name: 'SoyTransportista',
     component: () => import('../views/SitioWebInfo/SoyTransportista.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/GestionUsuarios/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/GestionUsuarios/Registro.vue')
   }
+
 ]
 
 const router = createRouter({
