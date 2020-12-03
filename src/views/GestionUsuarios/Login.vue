@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+    
     <h1>This is an Login page</h1>
     <form class="form-signin" @submit.prevent="login">
       <div class="text-center mb-4">
@@ -23,8 +24,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p>{{email}},{{password}}</p>
-      <p class="mt-5 mb-3 text-muted text-center">© 2017-2018{{token}}</p>
+      <p class="mt-5 mb-3 text-muted text-center">© 2017-2020</p>
     </form>
   </div>
 </template>
@@ -35,27 +35,13 @@ export default {
     email: "",
     password: "",
     error: false,
-    token: ""
   }),
   methods: {
     async login() {
       try{
-        let info = await auth.login(this.email, this.password);
-          console.log("full data");
-          console.log(info.data.data);
-          console.log("user");
-          console.log(info.data.data.user);
-          console.log("token");
-          this.token=(info.data.data.access_token);
+        await auth.login(this.email, this.password);
+        this.$router.push("/ejemplo");
       }catch (error) {
-        console.log(error);
-      }
-    },
-    async logout() {
-      try {
-        await auth.logout();
-        //this.$router.push("/");
-      } catch (error) {
         console.log(error);
       }
     }

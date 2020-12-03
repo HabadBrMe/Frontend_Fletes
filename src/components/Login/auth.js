@@ -1,24 +1,33 @@
 import axios from "axios";
 
-const ENDPOINT_PATH = "https://mobi-fletes-staging.herokuapp.com";
+const api = "https://mobi-fletes-staging.herokuapp.com";
 
 export default {
   login(email, password){
-    return axios.post(ENDPOINT_PATH + "/api/login/access", {email, password});
-     /* .then(function (response) {      
-          return response;
+    return axios.post(api + "/api/login/access", {email, password})
+     .then(function (response) {      
+        localStorage.Uinfo = JSON.stringify(response.data.data.user);
+        localStorage.Utoken = response.data.data.access_token;
+        console.log("Exios")
+        console.log(localStorage.Uinfo);
+        console.log(localStorage.Utoken);
       })
-      */
-  },
+ },
   logout(Atoken){
-    axios.post(ENDPOINT_PATH + "/api/login/logout", {Atoken})
+    var config = {
+      method: 'post',
+      url: api+'/api/login/logout',
+      headers: { 
+        'Authorization': 'Bearer '+Atoken
+      }
+    };
+    axios(config)
       .then(function (response) {
-        console.log(response);
-        console.log(response.data);
+        if(response){
+          localStorage.clear();
+          console.log(response);
+        }
       })
-      .catch(function (error) {
-        console.log(error);
-      });
   }
 };
 
