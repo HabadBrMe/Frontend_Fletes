@@ -1,4 +1,5 @@
-import axios from "axios";
+import axios from 'axios'
+import store from '@/store/index.js'
 
 const api = "https://mobi-fletes-staging.herokuapp.com";
 
@@ -8,9 +9,7 @@ export default {
      .then(function (response) {      
         localStorage.Uinfo = JSON.stringify(response.data.data.user);
         localStorage.Utoken = response.data.data.access_token;
-        console.log("Exios")
-        console.log(localStorage.Uinfo);
-        console.log(localStorage.Utoken);
+        store.commit('saveUser', response.data.data.access_token);
       })
  },
   logout(Atoken){
@@ -25,7 +24,7 @@ export default {
       .then(function (response) {
         if(response){
           localStorage.clear();
-          console.log(response);
+          console.log(response.data.message);
         }
       })
   }

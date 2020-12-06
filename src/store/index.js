@@ -1,20 +1,19 @@
 import { createStore } from 'vuex'
-// Create a new store instance.
+
 const store = createStore({
-  state: {
-    Uname: "",
-    Uemail: "",
-    Utoken: "",
-    prueba: ""
+  state () {
+    return {
+      prueba: 0
+    }
   },
   mutations: {
-      saveUser(state, name, email, token){
-          state.Uname = name;
-          state.Uemail = email;
-          state.Utoken = token;
+      saveUser(state, name){ //, email, token){
+          state.prueba = name;
+          //state.Uemail = email;
+          //state.Utoken = token;
       },
-      prueba(state, noe){
-        state.prueba = noe;
+      cambiarprueba(state){
+        state.prueba = "noe";
       }
   }
 });

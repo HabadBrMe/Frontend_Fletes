@@ -2,16 +2,13 @@
   <Sidebar />
   <h1>This is a page Usuaruio</h1>
   <p>{{info}}, {{token}}</p>
-  <div id="exit">
-      <button  v-on:click="Salir()" >Logout</button>  
-  </div>
 </template>
 
 <script>
 import Sidebar from '../components/Sidebar.vue'
-import auth from "@/components/Login/auth.js";
+import auth from '@/components/Login/auth.js'
 export default {
-  name: 'sid',
+  name: 'Ejem',
   components: {
     Sidebar
   },
@@ -27,6 +24,9 @@ export default {
       }catch (error) {
         console.log(error);
       }
+    },
+    otro() {
+      console.log(this.$store.state.prueba);
     }
   }
 }

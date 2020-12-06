@@ -23,7 +23,10 @@
             </li>
             </ul>
             <span class="navbar-text">
-            <div id="nav">
+            <div v-if="this.$store.state.prueba">
+                <Blogout />
+            </div>
+            <div v-else id="nav">
                 <router-link to="/login">Login</router-link> |
                 <router-link to="/register">Register</router-link> 
             </div>
@@ -34,7 +37,11 @@
 </template>
 
 <script>
+import Blogout from '../components/Blogout.vue'
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  components:{
+      Blogout
+  }
 }
 </script>
