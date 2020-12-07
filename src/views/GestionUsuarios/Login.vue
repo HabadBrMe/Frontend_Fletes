@@ -24,7 +24,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted text-center">© 2017-2020</p>
+      <p class="mt-5 mb-3 text-muted text-center">¿No tienes una cuenta?<router-link class="nav-link" to="/register">Crea una cuenta</router-link></p>
     </form>
   </div>
 </template>

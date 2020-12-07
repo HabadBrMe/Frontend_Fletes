@@ -23,6 +23,7 @@
             </li>
             </ul>
             <span class="navbar-text">
+                <Blogout />
             <div v-if="this.$store.state.prueba">
                 <Blogout />
             </div>

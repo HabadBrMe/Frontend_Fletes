@@ -43,7 +43,7 @@ const routes = [
   {
     path: '/ejemplo',
     name: 'Tablero',
-    component: () => import('../views/Ejemplo.vue')
+    component: () => import('../views/UserEnvia/Envios/MisEnvios.vue')
   }
 
 ]
