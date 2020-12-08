@@ -1,6 +1,6 @@
 <template>
   <div class="contacto row justify-content-md-center" >
-  <div class="card col-10">
+  <div class="card col-9">
     <div class="card-header">
       <h1>Contáctanos</h1>
       <p>Estamos atentos a tu consulta o duda</p>

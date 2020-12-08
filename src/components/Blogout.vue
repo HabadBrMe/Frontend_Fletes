@@ -11,7 +11,8 @@ export default {
     methods: {
         async salir() {
         try{
-            await auth.logout(localStorage.Utoken)
+            await auth.logout(localStorage.Utoken);
+            this.$store.commit('cambiarprueba');
             this.$router.push("/");
         }catch (error) {
             console.log(error);

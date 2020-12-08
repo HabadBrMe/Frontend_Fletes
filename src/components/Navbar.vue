@@ -23,13 +23,12 @@
             </li>
             </ul>
             <span class="navbar-text">
-                <Blogout />
             <div v-if="this.$store.state.prueba">
                 <Blogout />
             </div>
             <div v-else id="nav">
-                <router-link to="/login">Login</router-link> |
-                <router-link to="/register">Register</router-link> 
+                <router-link to="/login">Entrar</router-link> |
+                <router-link to="/register">Registrar</router-link> 
             </div>
             </span>
         </div>
