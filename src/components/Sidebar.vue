@@ -1,9 +1,9 @@
 <template>
-    <div id="mySidebar" class="sidebar">
+    <div id="mySidebar" class="sidebar bg-dark">">
     <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()">X</a>
         <a href="#">Resumen</a>
-    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Envios</a>
-    <div class="collapse" id="collapseExample">
+    <a data-toggle="collapse" href="#envios" role="button" aria-expanded="false" aria-controls="collapseExample">Envios</a>
+    <div class="collapse" id="envios">
             <a href="#" class="dropdown-item">Mis envíos</a>
             <a href="#" class="dropdown-item">Acceso a cargas</a>
             <a href="#" class="dropdown-item">Nuevo envío</a>
@@ -20,15 +20,19 @@
     <a href="#">Mis grupos</a>
     <a href="#">Mensajes</a>
     <a href="#">Calificaciones</a>
+    <Blogout />
     </div>
 
     <div id="main">
-        <button class="openbtn" v-on:click="openNav()" >☰</button>  
+        <button class="openbtn btn btn-dark" v-on:click="openNav()" >☰ Menu {{this.$store.state.autenticado}}</button>  
     </div>
 </template>
 
 <script>
+import Blogout from './Blogout.vue'
+//import Blogout from '../components/Blogout.vue'
 export default {
+  components: { Blogout },
     name: 'sidebar',
     methods: {
         openNav() {

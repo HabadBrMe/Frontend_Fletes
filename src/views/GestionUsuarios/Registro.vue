@@ -18,16 +18,16 @@
         </ul>
     <div class="collapse show" id="clienteenvia" data-parent="#register">
       <div class="card-body" >
-        <ul class="nav nav-tabs  row justify-content-md-center">
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#personal" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Cliente que Envia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#empresa" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Transportista</a>
-          </li>
-        </ul>
+        <div class="row justify-content-md-center">
+          <div class="m-3">
+            <input type="radio" id="personal" name="clien" data-toggle="collapse" href="#personal" role="button" aria-expanded="false" aria-controls="collapseExample" checked>
+            <label for="personal">Personal</label>
+          </div>
+          <div class="m-3">
+            <input type="radio" id="negocio" name="clien" data-toggle="collapse" href="#empresa" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <label for="negocio">Negocio o Empresa</label>
+          </div>
+        </div>
         <div class="collapse show" id="personal" data-parent="#clienteenvia">
           <fromcenviapersonal />
         </div>

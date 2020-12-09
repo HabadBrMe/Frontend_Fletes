@@ -6,13 +6,13 @@ const api = "https://mobi-fletes-staging.herokuapp.com";
 
 export default {
   login(email, password){
-    console.log(email);
-    console.log(password);
     axios.post(api + "/api/login/access", {email, password})
      .then(function (response) {      
         localStorage.Uinfo = JSON.stringify(response.data.data.user);
         localStorage.Utoken = response.data.data.access_token;
-        store.commit('saveUser', response.data.data.access_token);
+        localStorage.Urole = response.data.role;
+        store.commit('saveUser');
+        console.log(response.statusText);
         router.push("/ejemplo");
       })
       .catch(error => {

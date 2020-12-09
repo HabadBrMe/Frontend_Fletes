@@ -1,33 +1,19 @@
 <template>
   <Sidebar />
-  <h1>This is a page Usuaruio</h1>
-  <p>{{info}}, {{token}}</p>
+  <h1>Hola, Bienvenido</h1>
+  <p>Nombre usuario: {{info.name}}, y correo electronico: {{info.email}}</p>
 </template>
 
 <script>
 import Sidebar from '../components/Sidebar.vue'
-import auth from '@/components/Login/auth.js'
 export default {
   name: 'Ejem',
   components: {
     Sidebar
   },
   data: () => ({
-    info: localStorage.Uinfo,
+    info: JSON.parse(localStorage.Uinfo),
     token: localStorage.Utoken
-  }),
-  methods: {
-    async Salir() {
-      try{
-        await auth.logout(this.token)
-        this.$router.push("/");
-      }catch (error) {
-        console.log(error);
-      }
-    },
-    otro() {
-      console.log(this.$store.state.prueba);
-    }
-  }
+  })
 }
 </script>

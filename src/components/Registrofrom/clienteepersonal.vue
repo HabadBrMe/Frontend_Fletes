@@ -4,44 +4,44 @@
           <div class="row justify-content-md-center">
           <div class="form-group col-4">
             <label for="exampleInputEmail1">Primer Nombre del contacto</label>
-            <input v-model="first_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="first_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
           
             <label for="exampleInputEmail1">Primer Apellido del contacto</label>
-            <input v-model="first_last_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="first_last_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
 
             <label for="exampleInputEmail1">Segundo Nombre del contacto</label>
-            <input v-model="second_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="second_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             
             <label for="exampleInputEmail1">Segundo Apellido del contacto</label>
-            <input v-model="second_last_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="second_last_name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
 
           </div>
           <div class="form-group col-4">
             <label for="exampleInputEmail1">INE</label>
-            <input v-model="ine"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="ine"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
             <label for="exampleInputEmail1">Telefono</label>
-            <input v-model="phone"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="phone"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
          
             <label for="exampleInputEmail1">Website</label>
-            <input v-model="webside"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="webside"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
             <label for="exampleInputEmail1">Facebook</label>
-            <input v-model="facebook"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">          
+            <input v-model="facebook"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>          
           
           </div>
           <div class="form-group col-4">
             <label for="exampleInputEmail1">Dirección</label>
-            <input v-model="address"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="address"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
             <label for="exampleInputEmail1">Ciudad</label>
-            <input v-model="places"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="places"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
             <label for="exampleInputEmail1">C.P.</label>
-            <input v-model="cp"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="cp"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
             <label for="exampleFormControlSelect1">Zona Horaria</label>
-            <select v-model="time_zone" class="form-control" id="exampleFormControlSelect1">
+            <select v-model="time_zone" class="form-control" id="exampleFormControlSelect1" required>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -52,15 +52,15 @@
           <div class="row justify-content-md-center">
           <div class="form-group col-4">
             <label for="exampleInputEmail1">Email</label>
-            <input v-model="email"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input v-model="email"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
           </div>
           <div class="form-group col-4">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input v-model="password" type="password" class="form-control" id="password1" >
+            <input v-model="password" type="password" class="form-control" id="password1" required>
           </div>
           </div>
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
             <label class="form-check-label" for="exampleCheck1">Aceptas y confirmas que leíste nuestros aviso de privacidad incluido los términos y condiciones del servicio</label>
           </div>
           <button type="submit" class="btn btn-primary">Continuar</button>

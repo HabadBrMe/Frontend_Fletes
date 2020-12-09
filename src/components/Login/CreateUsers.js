@@ -18,7 +18,7 @@ export default {
      },
      UClientePersonal(data){
         console.log(data);
-        axios.post(api + "/api/admin/users/createClienteP", data)
+        axios.post(api + "/api/admin/users/createClienteP", {data})
          .then(function (response) {
             console.log(response)
             router.push("/login");

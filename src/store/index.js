@@ -3,17 +3,17 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      prueba: ""
+      autenticado: "",
     }
   },
   mutations: {
-      saveUser(state, name){ //, email, token){
-          state.prueba = name;
-          //state.Uemail = email;
-          //state.Utoken = token;
+      saveUser(state){ //, email, token){
+        if(localStorage.Uinfo && localStorage.Utoken && state.autenticado == ""){
+          state.autenticado = localStorage.Urole;
+        }
       },
-      cambiarprueba(state){
-        state.prueba = "";
+      clearUser(state){
+        state.autenticado = "";
       }
   }
 });

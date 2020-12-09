@@ -1,6 +1,6 @@
 <template>
     <div class="logout">
-        <button class="" v-on:click="salir">logout</button>
+        <button type="button" class="btn btn-dark" v-on:click="salir">Salir</button>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
         async salir() {
         try{
             await auth.logout(localStorage.Utoken);
-            this.$store.commit('cambiarprueba');
+            this.$store.commit('clearUser');
             this.$router.push("/");
         }catch (error) {
             console.log(error);

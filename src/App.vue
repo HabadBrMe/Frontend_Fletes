@@ -1,15 +1,22 @@
 <template>
-  <Navbar />
+  <div v-if="this.$store.state.autenticado">
+    <Sidebar />
+  </div>
+  <div v-else>
+    <Navbar />
+  </div>
+    <router-view />
 </template>
 
 <script>
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
-
+import Sidebar from '@/components/Sidebar.vue'
 export default {
   name: 'app',
   components: {
-    Navbar
+    Navbar,
+    Sidebar
   }
 }
 </script>
