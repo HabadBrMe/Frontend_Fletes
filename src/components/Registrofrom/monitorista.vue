@@ -82,7 +82,20 @@ export default {
   }),
   methods: {
     async crearMonitorista() {
-      await User.UMonitorista(JSON.stringify(this.$data));
+      await User.UMonitorista(
+        this.comercial_name,
+        this.rfc,
+        this.first_name,
+        this.second_name, 
+        this.first_last_name,
+        this.second_last_name,
+        this.ine,
+        this.email,
+        this.password,
+        this.phone,
+        this.places,
+        this.cp
+      );
     }
   }
 };

@@ -94,7 +94,23 @@ export default {
   }),
   methods: {
     async crearClienteEmpresa() {
-      await User.UClienteempresa(JSON.stringify(this.$data));
+      await User.UClienteempresa(
+        this.comercial_name,
+        this.rfc,
+        this.first_name,
+        this.second_name,
+        this.first_last_name,
+        this.second_last_name,
+        this.email,
+        this.password,
+        this.facebook,
+        this.webside,
+        this.places,
+        this.address,
+        this.phone,
+        this.cp,
+        this.time_zone
+      );
     }
   }
 };
