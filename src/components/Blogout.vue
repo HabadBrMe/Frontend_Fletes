@@ -1,6 +1,8 @@
 <template>
     <div class="logout">
-        <button type="button" class="btn btn-dark" v-on:click="salir">Salir</button>
+        <button type="button" class="btn btn-danger" v-on:click="salir">
+            Cerrar Sesión
+        </button>
     </div>
 </template>
 

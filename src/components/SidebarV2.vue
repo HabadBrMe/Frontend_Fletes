@@ -1,20 +1,68 @@
 <template>
     <div id="mySidebar" class="sidebar bg-dark" v-if="this.$store.state.autenticado == 'Transportista'">
-      <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()">X</a>
-      <a href="#">Resumen</a>
-      <a href="#">Mensajes</a>
-      <a data-toggle="collapse" href="#envios" role="button" aria-expanded="false" aria-controls="collapseExample">Cargas</a>
-      <div class="collapse" id="envios">
-              <a href="#" class="dropdown-item">Otros</a>
-      </div>
-      <a href="#">Ofertas</a>
-      <a href="#">Calificaciones</a>
-      <a href="#">Preguntas</a>
-      <a href="#">Vehiculos</a>
-      <a href="#">Administración</a>
-      <a href="#">Facturas</a>
-      <button type="button" class="btn btn-info">Usuario</button>
-      <Blogout />
+      <ul class="nav nav-tabs">
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Resumen</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mensajes</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Resibidos</a>
+                <a class="dropdown-item" href="#">Enviados</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cargas</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mis Cargas</a>
+                <a class="dropdown-item" href="#">Buscar Cargas</a>
+                <a class="dropdown-item" href="#">Tracking</a>
+                <a class="dropdown-item" href="#">Mis Cargas en bloque</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mis Ofertas</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mis Calificaciones</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mis Preguntas</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mis Veiculos</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mis Veiculos</a>
+                <a class="dropdown-item" href="#">Mis Choferes</a>
+
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administracion</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Usuarios</a>
+                <a class="dropdown-item" href="#">Mis Grupos</a>
+                <a class="dropdown-item" href="#">ETC..</a>
+
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Facturacion</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Gastos Adicionales</a>
+                <a class="dropdown-item" href="#">Prefactura</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Documentos</a>
+            </li>
+
+        </ul>
     </div>
     <div id="mySidebar" class="sidebar bg-dark" v-if="this.$store.state.autenticado == 'Cliente que envia'">
       <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()">X</a>
@@ -36,14 +84,13 @@
       <a href="#">Mis grupos</a>
       <a href="#">Administración</a>
       <a href="#">Reportes</a>
-      <button type="button" class="btn btn-info">Usuario</button>
+      <button>Usuario</button>
       <Blogout />
     </div>
     <div id="mySidebar" class="sidebar bg-dark" v-if="this.$store.state.autenticado == 'Monitorista'">
       <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()">X</a>
       <a href="#">Monitoreo</a>
       <a href="#">Historial</a>
-      <button type="button" class="btn btn-info">Usuario</button>
       <Blogout />
     </div>
     <div id="main">
@@ -83,12 +130,12 @@ export default {
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  color: #f5eeee;
+  color: #818181;
   display: block;
 }
 
 .sidebar a:hover {
-  color: #42b983;;
+  color: #f1f1f1;
 }
 
 .sidebar .closebtn {
