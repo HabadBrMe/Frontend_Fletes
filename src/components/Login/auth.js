@@ -13,7 +13,7 @@ export default {
         localStorage.Urole = response.data.role;
         store.commit('saveUser');
         console.log(response.statusText);
-        router.push("/ejemplo");
+        router.replace("/ejemplo");
       })
       .catch(error => {
         alert(error.response.data.errors)
