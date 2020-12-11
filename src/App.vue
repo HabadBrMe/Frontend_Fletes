@@ -2,9 +2,7 @@
   <div v-if="this.$store.state.autenticado">
     <Sidebar />
   </div>
-  <div v-else>
     <Navbar />
-  </div>
     <router-view />
 </template>
 

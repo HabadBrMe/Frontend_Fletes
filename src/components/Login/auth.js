@@ -16,6 +16,7 @@ export default {
         router.replace("/ejemplo");
       })
       .catch(error => {
+        console.log(error);
         alert(error.response.data.errors)
         return (error.response.data.errors);
       })

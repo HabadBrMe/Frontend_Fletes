@@ -1,22 +1,22 @@
 <template>
   <div class="login">
     <div class="contacto row justify-content-md-center" >
-      <div class="card col-5">
+      <div class="card">
         <div class="card-body">
         <form @submit.prevent="login">
           <div class="text-center mb-4">
-            <img src="@/assets/logo.webp" alt="">
+            <img src="@/assets/logo.webp" class="img-fluid" alt="">
             <h2>Iniciar Seción</h2>
           </div>
 
           <div class="form-group">
             <label for="inputEmail">Correo Electronico</label>
-            <input v-model="lemail" type="email" id="inputEmail" class="form-control" required="" autofocus="">
+            <input v-model="lemail" type="email" id="inputEmail" class="form-control" autofocus="" required>
           </div>
 
           <div class="form-group">
             <label for="inputPassword">Contraseña</label>
-            <input v-model="lpassword" type="password" id="inputPassword" class="form-control" required="">
+            <input v-model="lpassword" type="password" id="inputPassword" class="form-control" required>
           </div>
 
           <div class="mb-2">
