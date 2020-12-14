@@ -44,8 +44,17 @@ const routes = [
     path: '/ejemplo',
     name: 'Tablero',
     component: () => import('../views/Ejemplo.vue')
+  },
+  {
+    path: '/envios',
+    name: 'Envios',
+    component: () => import('../views/UserEnvia/Envios/PublicarEnvio.vue')
+  },
+  {
+    path: '/mensajes',
+    name: 'Mensajes',
+    component: () => import('../views/UserEnvia/Mensajes.vue')
   }
-
 ]
 
 const router = createRouter({
