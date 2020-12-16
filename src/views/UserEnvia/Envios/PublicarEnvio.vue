@@ -1,7 +1,7 @@
 <template>
   <div class="MisEnvios row justify-content-md-center" id="MisEnvios">
   <div class="col-9">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs row justify-content-md-center m-1">
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#publicar" role="button" aria-expanded="false" aria-controls="publicar">
           Publicar Envio</a>
