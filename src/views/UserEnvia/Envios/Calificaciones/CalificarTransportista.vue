@@ -1,8 +1,34 @@
 <template>
-  <div class="about">
-    <h1>This is an Soy Cliente Envia page</h1>
+
+
+
+<div class="row-md-12 p-5" style="width:80%;">
+  <div class="card  border-dark" style="max-width:600px; max-height: 1000px;">
+ 
+  <div class="card-header badge-dark">
+
     
-<h2>Star Rating</h2>
+   <h4> Califica al Transportista</h4>
+  </div>
+  <div class="card-body">
+
+
+    <h5 class="card-title">
+
+      <div class="row-md-12 p-1" style="display: inline-block">
+      <label for="CalificarTransportista">
+Transportista
+      </label>
+      </div>
+  
+<input type="Nombre del transportista">
+
+    </h5>
+
+
+    <div class="about">
+  
+<h2>Calificacion</h2>
 <span class="start fa fa-star " id="1"></span>
 <span class="start fa fa-star " id="2"></span>
 <span class="start fa fa-star " id="3"></span>
@@ -11,6 +37,17 @@
 <h2 id="showRating" ></h2>
 
   </div>
+    <a href="#" class="btn btn-dark">Finalizar</a>
+  </div>
+
+ <div class="card-footer badge-dark padding-top:20px">
+
+
+
+ </div>
+
+</div>
+</div>
 </template>
 
 <style>
