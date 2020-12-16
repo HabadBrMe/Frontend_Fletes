@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/SitioWebInfo/Nosotros.vue'
+import store from '@/store/index.js'
 
 const routes = [
   {
@@ -43,23 +44,42 @@ const routes = [
   {
     path: '/ejemplo',
     name: 'Tablero',
-    component: () => import('../views/Ejemplo.vue')
+    component: () => import('../views/UsuarioTransportista/moduloVehiculo/CombustibleVehiculos.vue')
   },
   {
     path: '/envios',
     name: 'Envios',
-    component: () => import('../views/UserEnvia/Envios/PublicarEnvio.vue')
+    component: () => import('../views/UserEnvia/Envios/PublicarEnvio.vue'),
+    meta: { 
+      requiresAuth: true
+     }
   },
   {
     path: '/mensajes',
     name: 'Mensajes',
-    component: () => import('../views/UserEnvia/Mensajes.vue')
+    component: () => import('../views/UserEnvia/Mensajes.vue'),
+    meta: { 
+      requiresAuth: true 
+    }
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (localStorage.Uinfo && localStorage.Utoken && localStorage.Urole) {
+      store.commit('saveUser')
+      next()
+    }else {
+      next('/login')
+    }
+  } else {
+    next()
+  }
 })
 
 export default router
