@@ -6,12 +6,13 @@
 <div class="row-md-12 p-5">
 
 
-      <img src="fletes.jpg"  style="max-width:600px; max-height: 400px; " alt="Fletes">
 <div class="col-md-12" style="width:100%;">
               
 
                 <div class="left_text">
                     <h2>¿Qué es Fletes?</h2>
+
+                     <img src="fletes.jpg"  style="max-width:600px; max-height: 500px; " alt="Fletes">
                 </div>
                 <p style="text-align: justify !important;    font-size: 18px;
     font-weight: 200;">Fletes, es la primera empresa en México para el servicio de gestión de transporte de carga, que funciona a través de una aplicación disponible para computadoras, laptops y celulares. </p>
@@ -44,8 +45,10 @@
     <p class="card-text" style="text-align: justify !important;    font-size: 18px;
     font-weight: 200;">Poner al alcance del mercado innovación y tecnología para facilitar las operaciones de transporte dentro de la cadena logística de abastecimiento, así como en los requerimientos ordinarios de la sociedad, de transporte de carga.</p>
   </div>
+
   <div class="card-footer bg-transparent border-success">
 
+                    
 
   </div>
 
