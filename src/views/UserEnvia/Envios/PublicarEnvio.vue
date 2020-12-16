@@ -188,7 +188,89 @@
   </div>
   <div class="collapse" id="envios" data-parent="#MisEnvios">
     <div class="card card-body">
-      hola
+        <div class="card-header">
+        <h5>Mis Envios</h5>
+      </div>
+      <div class="card-body row justify-content-md-center">
+          <div class="form-group col">
+
+            <label for="peso">Titulo, Ubicacion o Referencia</label>
+            <input type="text" class="form-control" name="referencia" id="referencia" required> 
+          
+          </div>
+          <div class="form-group col">
+            <label for="date">Fecha de publicacion<p></p></label>
+            <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2010-01-01" max="2020-12-31">
+
+          </div>
+
+          <div class="form-group col">
+
+          <label for="tipo_vehiculo">Tipo de Vehiculo<p></p></label>
+          <select name="tipo_vehiculo" id="tipo_vehiculo">
+            <option value="0">Seleccione</option>
+            <option value="Camioneta">Camioneta</option>
+            <option value="Full (doble caja)">Full (doble caja)</option>
+            <option value="Thorton">Thorton</option>
+            <option value="Trailer de 48">Trailer de 48</option>
+            <option value="Trailer 53">Trailer 53´´</option>
+          </select> 
+
+          </div>
+
+          <div class="form-group col">
+            <div class="row">
+              <h5>Estado del Envio<p></p></h5>
+            </div>  
+            <div class="form-group row">  
+              <div class="form-check m-1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Activo</label>
+              </div>
+              <div class="form-check m-1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Eliminado</label>
+              </div>
+            </div>
+          </div> 
+
+          <div class="col-12 align-self-start">
+            <div class="row">
+              <h5>Tipo de servicio</h5>
+            </div>  
+            <div class="form-group row"> 
+
+            <select name="servicio">
+              <option value="0">Seleccione</option>
+              <option value="Alimentos y Bebidas">Alimentos y Bebidas</option>
+              <option value="Carga General Seca">Carga General Seca</option>
+              <option value="Carga Liquida">Carga Liquida</option>
+              <option value="Carga Peligrosa IMO">Carga Peligrosa IMO</option>
+              <option value="Carga Refrigerada">Carga Refrigerada</option>
+              <option value="Insumos">Insumos</option>
+              <option value="Material Peligroso">Material Peligroso</option>
+          </select>    
+
+            </div>
+          </div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Titulo</th>
+      <th scope="col">Carga-Entregar</th>
+      <th scope="col">Estado</th>
+      <th scope="col">----</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+      </div>
     </div>
   </div>
   <div class="collapse" id="gastos" data-parent="#MisEnvios">
