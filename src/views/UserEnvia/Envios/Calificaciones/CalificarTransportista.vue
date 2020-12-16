@@ -2,8 +2,9 @@
 
 
 
-<div class="row-md-12 p-5" style="width:80%;">
-  <div class="card  border-dark" style="max-width:600px; max-height: 1000px;">
+<div class="row p-5">
+  <div class="col-12 d-flex justify-content-center">
+        <div class="card  border-dark" style="max-width:600px; max-height: 1000px;">
  
   <div class="card-header badge-dark">
 
@@ -47,6 +48,7 @@ Transportista
  </div>
 
 </div>
+  </div>
 </div>
 </template>
 
