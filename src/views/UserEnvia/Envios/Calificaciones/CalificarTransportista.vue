@@ -37,7 +37,7 @@ Transportista
 <h2 id="showRating" ></h2>
 
   </div>
-    <a href="#" class="btn btn-primary">Finalizar</a>
+    <a href="#" class="btn btn-dark">Finalizar</a>
   </div>
 
  <div class="card-footer badge-dark padding-top:20px">
