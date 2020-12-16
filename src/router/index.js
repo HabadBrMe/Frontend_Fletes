@@ -41,27 +41,69 @@ const routes = [
     name: 'Register',
     component: () => import('../views/GestionUsuarios/Registro.vue')
   },
+//----------------------Usuarios----------------------------------------------
   {
     path: '/ejemplo',
     name: 'Tablero',
-    component: () => import('../views/UsuarioTransportista/moduloVehiculo/CombustibleVehiculos.vue')
-  },
-  {
-    path: '/envios',
-    name: 'Envios',
-    component: () => import('../views/UserEnvia/Envios/PublicarEnvio.vue'),
-    meta: { 
-      requiresAuth: true
-     }
+    component: () => import('../views/Ejemplo.vue')
   },
   {
     path: '/mensajes',
     name: 'Mensajes',
     component: () => import('../views/UserEnvia/Mensajes.vue'),
     meta: { 
-      requiresAuth: true 
+      requiresAuth: true
     }
+  },
+//-----------------------Usuario que envia------------------------------------------
+{
+  path: '/envios',
+  name: 'Envios',
+  component: () => import('../views/UserEnvia/Envios/PublicarEnvio.vue'),
+  meta: { 
+    requiresAuth: true,
+    requiresRol: "Cliente que envia" 
+   }
+},
+//-----------------------Usuario transportista--------------------------------------
+{
+  path: '/vehiculos',
+  name: 'Vehiculos',
+  component: () => import('../views/UsuarioTransportista/moduloVehiculo/Vehiculos.vue'),
+  meta: { 
+    requiresAuth: true,
+    requiresRol: "Transportista" 
+   }
+},
+{
+  path: '/choferes',
+  name: 'Choferes',
+  component: () => import('../views/UsuarioTransportista/moduloChofer/Choferes.vue'),
+  meta: { 
+    requiresAuth: true,
+    requiresRol: "Transportista"
+   }
+},
+//-----------------------Usuario monitorista----------------------------------------
+{
+  path: '/monitoreo',
+  name: 'Monitoreo',
+  component: () => import('../views/UserEnvia/Mensajes.vue'),
+  meta: { 
+    requiresAuth: true,
+    requiresRol: "Monitorista"
   }
+},
+{
+  path: '/historial',
+  name: 'Historial',
+  component: () => import('../views/UserEnvia/Mensajes.vue'),
+  meta: { 
+    requiresAuth: true,
+    requiresRol: "Monitorista"
+  }
+},
+
 ]
 
 const router = createRouter({
