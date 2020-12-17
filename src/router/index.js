@@ -81,7 +81,7 @@ const routes = [{
             import ('../views/UserEnvia/Envios/Calificaciones/CalificarTransportista.vue'),
         meta: {
             requiresAuth: true,
-
+            requiresRol: "Cliente que envia"
         }
     },
     //-----------------------Usuario transportista--------------------------------------
@@ -135,16 +135,19 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some((record) => record.meta.requiresAuth)) {
-        if (localStorage.Uinfo && localStorage.Utoken && localStorage.Urole) {
-            store.commit('saveUser')
-            next()
-        } else {
-            next('/login')
-        }
-    } else {
-        next()
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    console.log("Tipo de pagina para: "+ to.meta.requiresRol);
+    if (localStorage.Uinfo && localStorage.Utoken && localStorage.Urole) {
+      //localStorage.Urole == to.meta.requiresRol
+      store.commit('saveUser')
+      next()
+    }else {
+      console.log("ops acceso denegado");
+      next('/login')
     }
+  } else {
+    next()
+  }
 })
 
 export default router

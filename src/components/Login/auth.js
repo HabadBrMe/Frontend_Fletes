@@ -33,6 +33,9 @@ export default {
       .then(function (response) {
         if(response){
           localStorage.clear();
+          localStorage.removeItem('Uinfo');
+          localStorage.removeItem('Utoken');
+          localStorage.removeItem('Urole');
           console.log(response.data.message);
         }
       })
